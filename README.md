@@ -419,9 +419,9 @@ export const skills = [
 ### Desenvolvedor
 
 **Nome**: Seu Nome
-- 📧 Email: seu-email@exemplo.com
-- 💼 LinkedIn: [linkedin.com/in/seu-perfil](https://linkedin.com/in/seu-perfil)
-- 🐙 GitHub: [@seu-usuario](https://github.com/seu-usuario)
+- 📧 Email: develfullstack.arthur@gmail.com
+- 💼 LinkedIn: [linkedin.com/in/seu-perfil](https://www.linkedin.com/in/arthur-n%C3%B3brega-061193265?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app)
+- 🐙 GitHub: [@seu-usuario](https://github.com/ARTHURNOBREGA1268)
 - 🌐 Portfolio: [seu-portfolio.com](https://seu-portfolio.com)
 
 ### Formulário de Contato
