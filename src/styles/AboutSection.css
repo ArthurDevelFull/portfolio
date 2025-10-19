@@ -1,0 +1,78 @@
+/* src\styles\AboutSection.css */
+.achievements-grid {
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    margin: 0 -0.5rem;
+}
+
+.achievement-col {
+    flex: 1;
+    padding: 0 0.5rem;
+    min-width: 0;
+}
+
+.achievement-card {
+    height: 100%;
+    min-height: 250px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    transition: all var(--transition-normal);
+    background: var(--lighter-bg);
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    border-radius: var(--radius-lg);
+    padding: 2rem 1.5rem;
+    box-shadow: var(--shadow-sm);
+}
+
+.achievement-card:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--shadow-lg);
+    border-color: var(--primary-light);
+}
+
+.achievement-card .display-4 {
+    font-size: 2.5rem;
+    margin-bottom: 1.5rem;
+    line-height: 1;
+    color: var(--primary-color);
+}
+
+.achievement-card h4 {
+    font-size: 1rem;
+    margin-bottom: 1rem;
+    width: 100%;
+    color: var(--text-primary);
+    font-weight: 600;
+}
+
+.achievement-card p {
+    font-size: 0.875rem;
+    line-height: 1.5;
+    margin: 0;
+    max-width: 90%;
+    margin: 0 auto;
+    color: var(--text-secondary);
+}
+
+/* Responsivo -Cards um abaixo do outro em mobile */
+@media (max-width: 991px) {
+    .achievements-grid {
+        flex-direction: column;
+        margin: 0;
+    }
+
+    .achievement-col {
+        flex: none;
+        width: 100%;
+        padding: 0;
+        margin-bottom: 1rem;
+    }
+
+    .achievement-col:last-child {
+        margin-bottom: 0;
+    }
+}

@@ -1,0 +1,272 @@
+/* Header - Navbar Customizada */
+.custom-navbar {
+    background: rgba(255, 255, 255, 0.98) !important;
+    backdrop-filter: blur(10px);
+    box-shadow: 0 2px 20px rgba(0, 0, 0, 0.08);
+    padding: 1rem 0;
+    transition: all 0.3s ease;
+    z-index: 1030;
+}
+
+/* Garantir opacidade total em mobile SEMPRE */
+@media (max-width: 991px) {
+    .custom-navbar {
+        background: #ffffff !important;
+        backdrop-filter: none;
+    }
+
+    .custom-navbar .navbar-collapse {
+        background: #ffffff !important;
+        margin-top: 1rem;
+        padding: 1rem;
+        border-radius: 12px;
+        box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    }
+
+    /* Garantir que o collapse também seja opaco */
+    .custom-navbar .navbar-collapse.show,
+    .custom-navbar .navbar-collapse.collapsing {
+        background: #ffffff !important;
+    }
+}
+
+.custom-navbar.navbar-scrolled {
+    background: rgba(255, 255, 255, 1) !important;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.12);
+    padding: 0.5rem 0;
+}
+
+/* Brand customizada */
+.navbar-brand-custom {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--text-primary) !important;
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+    gap: 0.25rem;
+}
+
+.navbar-brand-custom:hover {
+    transform: scale(1.05);
+}
+
+.brand-bracket {
+    color: var(--primary-color);
+    font-weight: 900;
+}
+
+.brand-text {
+    background: linear-gradient(135deg, var(--primary-color) 0%, var(--secondary-color) 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+/* Nav Links */
+.nav-link-custom {
+    color: var(--text-secondary) !important;
+    font-weight: 500;
+    padding: 0.5rem 1rem !important;
+    margin: 0 0.25rem;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+    position: relative;
+}
+
+.nav-link-custom:hover {
+    color: var(--primary-color) !important;
+    background: rgba(59, 130, 246, 0.1);
+}
+
+.nav-link-custom::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    width: 0;
+    height: 2px;
+    background: var(--primary-color);
+    transition: all 0.3s ease;
+    transform: translateX(-50%);
+}
+
+.nav-link-custom:hover::after {
+    width: 70%;
+}
+
+/* Social Icons */
+.social-links {
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+}
+
+.social-icon {
+    color: var(--text-secondary);
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background: transparent;
+}
+
+.social-icon:hover {
+    color: var(--primary-color);
+    background: rgba(59, 130, 246, 0.1);
+    transform: translateY(-2px);
+}
+
+/* Custom Toggler */
+.custom-toggler {
+    border: 2px solid var(--primary-color);
+    border-radius: 8px;
+    padding: 0.5rem;
+    transition: all 0.3s ease;
+}
+
+.custom-toggler:focus {
+    box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.2);
+}
+
+.navbar-toggler-icon-custom {
+    display: block;
+    width: 25px;
+    height: 2px;
+    background: var(--primary-color);
+    position: relative;
+    transition: all 0.3s ease;
+}
+
+.navbar-toggler-icon-custom::before,
+.navbar-toggler-icon-custom::after {
+    content: '';
+    display: block;
+    width: 25px;
+    height: 2px;
+    background: var(--primary-color);
+    position: absolute;
+    transition: all 0.3s ease;
+}
+
+.navbar-toggler-icon-custom::before {
+    top: -8px;
+}
+
+.navbar-toggler-icon-custom::after {
+    bottom: -8px;
+}
+
+.custom-toggler[aria-expanded="true"] .navbar-toggler-icon-custom {
+    background: transparent;
+}
+
+.custom-toggler[aria-expanded="true"] .navbar-toggler-icon-custom::before {
+    transform: rotate(45deg);
+    top: 0;
+}
+
+.custom-toggler[aria-expanded="true"] .navbar-toggler-icon-custom::after {
+    transform: rotate(-45deg);
+    bottom: 0;
+}
+
+/* Responsividade Mobile */
+@media (max-width: 991px) {
+    .navbar-brand-custom {
+        font-size: 1.25rem;
+    }
+
+    .nav-link-custom {
+        padding: 0.75rem 1rem !important;
+        margin: 0.25rem 0;
+        text-align: center;
+    }
+
+    .nav-link-custom::after {
+        display: none;
+    }
+
+    .social-links {
+        justify-content: center;
+        padding: 1rem 0;
+        border-top: 1px solid rgba(0, 0, 0, 0.1);
+        margin-top: 1rem;
+    }
+}
+
+/* Animações */
+@keyframes fadeInDown {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.navbar-collapse.show {
+    animation: fadeInDown 0.3s ease;
+}
+
+/* Ajustes para links ativos */
+.nav-link-custom.active {
+    color: var(--primary-color) !important;
+    background: rgba(59, 130, 246, 0.1);
+}
+
+/* Hover effects suavizados */
+.custom-navbar a {
+    -webkit-tap-highlight-color: transparent;
+}
+
+/* Garantir contraste em mobile */
+@media (max-width: 991px) {
+    .nav-link-custom {
+        background: rgba(248, 250, 252, 0.8);
+    }
+
+    .nav-link-custom:hover,
+    .nav-link-custom.active {
+        background: rgba(59, 130, 246, 0.15);
+    }
+}
+
+/* Container customizado */
+.custom-navbar .container {
+    max-width: 1400px;
+}
+
+/* Separador visual no mobile */
+@media (max-width: 991px) {
+    .custom-navbar .navbar-nav {
+        padding: 0.5rem 0;
+    }
+}
+
+/* Smooth transitions */
+.custom-navbar * {
+    transition: all 0.3s ease;
+}
+
+/* Focus styles para acessibilidade */
+.nav-link-custom:focus,
+.social-icon:focus {
+    outline: 2px solid var(--primary-color);
+    outline-offset: 2px;
+}
+
+/* Garantir legibilidade do texto */
+@media (max-width: 991px) {
+    .nav-link-custom {
+        font-size: 1rem;
+        font-weight: 600;
+        color: var(--text-primary) !important;
+    }
+}
