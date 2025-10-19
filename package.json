@@ -2,10 +2,6 @@
   "name": "meu-portfolio",
   "private": true,
   "type": "module",
-  "engines": {
-    "node": "20.18.0",
-    "npm": ">=10.0.0"
-  },
   "scripts": {
     "dev": "react-router dev",
     "build": "npm run clean && npm run typegen && npm run build:router",
@@ -13,7 +9,7 @@
     "typegen": "react-router typegen",
     "start": "react-router-serve ./build/server/index.js",
     "typecheck": "npm run typegen && tsc",
-    "clean": "rm -rf build .react-router",
+    "clean": "rimraf build .react-router",
     "preview": "npm run build && npm run start",
     "vercel-build": "npm run build"
   },
@@ -39,9 +35,13 @@
     "@types/node": "^22",
     "@types/react": "^19.1.13",
     "@types/react-dom": "^19.1.9",
+    "rimraf": "^6.0.1",
     "tailwindcss": "^4.1.13",
     "typescript": "^5.9.2",
     "vite": "^7.1.7",
     "vite-tsconfig-paths": "^5.1.4"
+  },
+  "engines": {
+    "node": ">=20.0.0"
   }
 }
