@@ -11,7 +11,7 @@ import Footer from "../../src/components/Footer";
 
 export function meta({ }: Route.MetaArgs) {
   return [
-    { title: "Portfólio Profissional - Desenvolvedor Full Stack" },
+    { title: "Arthur Nobrega" },
     { name: "description", content: "Desenvolvedor Full Stack Sênior especializado em criar soluções tecnológicas escaláveis, seguras e de alta performance" },
     { name: "keywords", content: "desenvolvedor full stack, react, node.js, postgresql, typescript, arquitetura de software" },
   ];
