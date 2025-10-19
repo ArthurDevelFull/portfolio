@@ -4,7 +4,7 @@
   "type": "module",
   "scripts": {
     "dev": "react-router dev",
-    "build": "npm run clean && npm run typegen && npm run build:router",
+    "build": "npm run typegen && npm run build:router",
     "build:router": "react-router build",
     "typegen": "react-router typegen",
     "start": "react-router-serve ./build/server/index.js",
@@ -27,7 +27,8 @@
     "react-icons": "^5.5.0",
     "react-router": "^7.9.2",
     "react-router-dom": "^7.9.4",
-    "react-syntax-highlighter": "^15.6.6"
+    "react-syntax-highlighter": "^15.6.6",
+    "rimraf": "^6.0.1"
   },
   "devDependencies": {
     "@react-router/dev": "^7.9.2",
@@ -35,7 +36,6 @@
     "@types/node": "^22",
     "@types/react": "^19.1.13",
     "@types/react-dom": "^19.1.9",
-    "rimraf": "^6.0.1",
     "tailwindcss": "^4.1.13",
     "typescript": "^5.9.2",
     "vite": "^7.1.7",
