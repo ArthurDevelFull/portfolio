@@ -1,25 +1,4 @@
 {
-  "version": 2,
-  "framework": null,
   "buildCommand": "npm run build",
-  "devCommand": "npm run dev",
-  "installCommand": "npm install --legacy-peer-deps",
-  "outputDirectory": "build/client",
-  "regions": ["iad1"],
-  "env": {
-    "NODE_VERSION": "20.18.0",
-    "NPM_CONFIG_LEGACY_PEER_DEPS": "true"
-  },
-  "build": {
-    "env": {
-      "NODE_ENV": "production",
-      "CI": "true"
-    }
-  },
-  "rewrites": [
-    {
-      "source": "/(.*)",
-      "destination": "/"
-    }
-  ]
+  "outputDirectory": "build/client"
 }
