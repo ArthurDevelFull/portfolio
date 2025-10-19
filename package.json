@@ -4,10 +4,11 @@
   "type": "module",
   "scripts": {
     "dev": "react-router dev",
-    "build": "npx react-router build",
+    "build": "npx react-router typegen && npx react-router build",
     "start": "react-router-serve ./build/server/index.js",
-    "typecheck": "react-router typegen && tsc",
-    "postinstall": "react-router typegen"
+    "typecheck": "npx react-router typegen && tsc",
+    "clean": "rm -rf build .react-router",
+    "preview": "npm run build && npm run start"
   },
   "dependencies": {
     "@emailjs/browser": "^4.4.1",
@@ -37,7 +38,6 @@
     "vite-tsconfig-paths": "^5.1.4"
   },
   "engines": {
-    "node": ">=20.0.0",
-    "npm": ">=10.0.0"
+    "node": ">=20.0.0"
   }
 }
