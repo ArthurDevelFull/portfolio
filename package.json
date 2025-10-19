@@ -2,13 +2,20 @@
   "name": "meu-portfolio",
   "private": true,
   "type": "module",
+  "engines": {
+    "node": "20.18.0",
+    "npm": ">=10.0.0"
+  },
   "scripts": {
     "dev": "react-router dev",
-    "build": "npx react-router typegen && npx react-router build",
+    "build": "npm run clean && npm run typegen && npm run build:router",
+    "build:router": "react-router build",
+    "typegen": "react-router typegen",
     "start": "react-router-serve ./build/server/index.js",
-    "typecheck": "npx react-router typegen && tsc",
+    "typecheck": "npm run typegen && tsc",
     "clean": "rm -rf build .react-router",
-    "preview": "npm run build && npm run start"
+    "preview": "npm run build && npm run start",
+    "vercel-build": "npm run build"
   },
   "dependencies": {
     "@emailjs/browser": "^4.4.1",
@@ -36,8 +43,5 @@
     "typescript": "^5.9.2",
     "vite": "^7.1.7",
     "vite-tsconfig-paths": "^5.1.4"
-  },
-  "engines": {
-    "node": ">=20.0.0"
   }
 }
